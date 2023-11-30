@@ -48,7 +48,7 @@ def build_query():
 collection = connect_to_mongodb()
 
 # Definición de la interfaz de usuario con Streamlit
-def main():
+
 
 
 
@@ -175,5 +175,4 @@ if st.sidebar.button("Limpiar Campos"):
 # Cierre de la conexión a la base de datos
 #client.close()
 
-if __name__ == "__main__":
-    main()
+
