@@ -22,11 +22,6 @@ on:
 
 jobs:
   bandit:
-    permissions:
-      contents: read
-      security-events: write
-      actions: read
-
     runs-on: ubuntu-latest
 
     steps:
@@ -39,8 +34,8 @@ jobs:
           exit_zero: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install pip
-        run: sudo apt-get update && sudo apt-get install -y python3-pip
-
-      - name: Install dnspython and pymongo
-        run: python3 -m pip install dnspython pymongo
+      - name: Install Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y python3-pip
+          python3 -m pip install dnspython pymongo
