@@ -7,8 +7,6 @@ incluir_palabras = ""
 excluir_palabras = ""
 codigo_providencia = ""
 
-
-# Conexión a la base de datos
 # Conexión a la base de datos
 def connect_to_mongodb():
     connection_str = "mongodb+srv://dcorread:BigMamma23@bigdata2023.hqgu6wf.mongodb.net/?retryWrites=true&w=majority"
