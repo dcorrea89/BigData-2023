@@ -1,7 +1,10 @@
+import subprocess
 import pymongo
 import streamlit as st
 from pymongo import MongoClient
 import json
+
+subprocess.run(["pip", "install", "pymongo[srv]"])
 
 # Inicializar variables
 incluir_palabras = ""
