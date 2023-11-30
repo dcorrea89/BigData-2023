@@ -20,6 +20,7 @@ def connect_to_mongodb():
         return None  # Puedes manejar este valor de retorno según tus necesidades
 
 
+
 # Lógica para construir la consulta a MongoDB
 def build_query():
     query = {}
