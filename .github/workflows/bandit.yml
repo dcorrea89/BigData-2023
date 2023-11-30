@@ -50,6 +50,7 @@ jobs:
           # path to a .bandit file that supplies command line arguments
           # ini_path: # optional, default is DEFAULT
       - name: Install Dependencies
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install "pymongo[srv]"
+        run: python -m pip install --upgrade pip
+
+      - name: Install pymongo with srv
+        run: python -m pip install pymongo[srv]
