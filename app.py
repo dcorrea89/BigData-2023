@@ -2,6 +2,12 @@ import streamlit as st
 from pymongo import MongoClient
 import json
 
+# Inicializar variables
+incluir_palabras = ""
+excluir_palabras = ""
+codigo_providencia = ""
+
+
 # Conexión a la base de datos
 # Conexión a la base de datos
 def connect_to_mongodb():
