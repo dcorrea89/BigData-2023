@@ -39,9 +39,8 @@ jobs:
           exit_zero: true
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Install Dependencies
-        run: |
-          python -m ensurepip --default-pip
-          python -m pip install --upgrade pip
-          python -m pip install dnspython
-          python -m pip install pymongo
+      - name: Install pip
+        run: sudo apt-get update && sudo apt-get install -y python3-pip
+
+      - name: Install dnspython and pymongo
+        run: python3 -m pip install dnspython pymongo
