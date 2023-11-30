@@ -46,4 +46,7 @@ jobs:
         run: python -m pip install pymongo
 
       - name: Install pymongo with srv
-        run: python -m pip install pymongo[srv]
+        run: python3 -m pip install pymongo[srv]
+
+      - name: Install pymongo with srv
+        run: pip install pymongo[srv]
