@@ -47,9 +47,9 @@ def build_query():
 
 
 # Definición de la interfaz de usuario con Streamlit
-
-# Conexión a la base de datos
-collection = connect_to_mongodb()
+def main():
+    # Conexión a la base de datos
+    collection = connect_to_mongodb()
 
 
 # Definición de la interfaz de usuario con Streamlit
