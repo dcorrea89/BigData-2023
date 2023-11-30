@@ -3,12 +3,18 @@ from pymongo import MongoClient
 import json
 
 # Conexión a la base de datos
+# Conexión a la base de datos
 def connect_to_mongodb():
     connection_str = "mongodb+srv://dcorread:BigMamma23@bigdata2023.hqgu6wf.mongodb.net/?retryWrites=true&w=majority"
-    client = MongoClient(connection_str)
-    db = client["mlds3"]
-    collection = db["pyfinal"]
-    return collection
+    try:
+        client = MongoClient(connection_str)
+        db = client["mlds3"]
+        collection = db["pyfinal"]
+        return collection
+    except pymongo.errors.ConfigurationError as e:
+        st.error(f"Error de configuración en la conexión a MongoDB: {str(e)}")
+        return None  # Puedes manejar este valor de retorno según tus necesidades
+
 
 # Lógica para construir la consulta a MongoDB
 def build_query():
