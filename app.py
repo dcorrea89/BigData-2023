@@ -16,7 +16,7 @@ def connect_to_mongodb():
         collection = db["pyfinal"]
         return collection
     except pymongo.errors.ConfigurationError as e:
-        st.error(f"Error de configuración en la conexión a MongoDB: {str(e)}")
+        print(f"Error de configuración de MongoDB: {e}")
         return None  # Puedes manejar este valor de retorno según tus necesidades
 
 
