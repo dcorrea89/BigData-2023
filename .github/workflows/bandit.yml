@@ -40,5 +40,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install Dependencies
-        run: bash install_dependencies.sh 
-    
+        run: |
+          python -m ensurepip --default-pip
+          python -m pip install --upgrade pip
+          python -m pip install dnspython
+          python -m pip install pymongo
