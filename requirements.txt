@@ -6,12 +6,3 @@ pymongo==4.2.0
 dnspython==2.1.0
 traits==6.3.2
 streamlit==1.19.0
-
-
-
-
-# pip install streamlit pymongo
-# pip install streamlit
-
-#cd C:\PyFinal\ETL
-#python -m streamlit run app.py
